@@ -1,0 +1,46 @@
+<h1>Job Application</h1>
+<div class="jumbotron">
+  #if($CDList)
+    <ul>
+      #foreach ($jobList in $JobsList)
+      <li>$cd.getJob()</li>
+      <li>$cd.getTitle()</li>
+      <li>$cd.getCompany()</li>
+      <li>$cd.getStartDate()</li>
+      <li>$cd.getEndDate()</li>
+      <br>
+      #end
+    </ul>
+  #else
+    <h4>Job references empty.</h4>
+  #end
+</div>
+
+<h3>Please enter your job references</h3>
+
+<h1>Enter your work history.</h1>
+
+<form class="jumbotron" action="Forms.java" method="post">
+  <div class="form-group">
+    <label for="job">Enter job</label>
+    <input id="job" type="text" name="job" value="">
+  </div>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input id="title" type="text" name="title" value="">
+  </div>
+  <div class="form-group">
+    <label for="company">Company name</label>
+    <input id="company" type="text" name="company" value="">
+  </div>
+  <div class="form-group">
+    <label for="startDate">Start Date:mm/yyyy</label>
+    <input id="startDate" type="text" name="startDate" value="">
+  </div>
+  <div class="form-group">
+    <label for="endDate">End Date:mm/yyyy</label>
+    <input id="endDate" type="text" name="endDate" value="">
+  </div>
+
+  <button type="submit" class="btn"name="button">Submit</button>
+</form>
