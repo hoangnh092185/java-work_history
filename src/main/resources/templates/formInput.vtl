@@ -1,13 +1,13 @@
 <h1>Job Application</h1>
 <div class="jumbotron">
-  #if($CDList)
+  #if($jobList)
     <ul>
       #foreach ($jobList in $JobsList)
-      <li>$cd.getJob()</li>
-      <li>$cd.getTitle()</li>
-      <li>$cd.getCompany()</li>
-      <li>$cd.getStartDate()</li>
-      <li>$cd.getEndDate()</li>
+      <li>$jobList.getJob()</li>
+      <li>$jobList.getTitle()</li>
+      <li>$jobList.getCompany()</li>
+      <li>$jobList.getStartDate()</li>
+      <li>$jobList.getEndDate()</li>
       <br>
       #end
     </ul>
@@ -20,7 +20,7 @@
 
 <h1>Enter your work history.</h1>
 
-<form class="jumbotron" action="Forms.java" method="post">
+<form class="jumbotron" action="/Forms" method="post">
   <div class="form-group">
     <label for="job">Enter job</label>
     <input id="job" type="text" name="job" value="">
